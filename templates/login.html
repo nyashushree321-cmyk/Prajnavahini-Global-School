@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Parent / Student Login - Prajnavahini Global School{% endblock %}
+{% block content %}
+  <div class="container py-5" style="background: #f3f6fb;">
+    <div class="row justify-content-center">
+      <div class="col-md-5">
+        <div class="card shadow-lg p-4 rounded-4">
+          <h3 class="text-center mb-4">Parent / Student Login</h3>
+          <form method="post">
+            {% csrf_token %}
+            <div class="mb-3">
+              <label class="form-label">Email ID</label>
+              <input type="email" class="form-control" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Password</label>
+              <input type="password" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-primary w-100 py-2">Login</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

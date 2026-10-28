@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Mentor Messages - Prajnavahini Global School{% endblock %}
+{% block content %}
+         <section id="home" class="slider-area fix p-relative">
+  <div class="slider-active" style="background: #021341;">
+
+    <div class="single-slider slider-bg" style="background-image: url('{% static 'img/slider/slider_img02.png' %}'); background-size: cover; background-position: center;">
+      <div class="container">
+        <div class="row align-items-center">
+
+          <div class="col-lg-7 col-md-7 col-sm-12">
+            <div class="slider-content s-slider-content mt-130 text-center text-md-start">
+              <h5 data-animation="fadeInUp" data-delay=".4s">Welcome To Prajnavahini Global School</h5>
+              <h2 data-animation="fadeInUp" data-delay=".4s">Education is the best key success in life</h2>
+              <p data-animation="fadeInUp" data-delay=".6s">
+                To nurture Compassionate, Curious, and Confident global citizens through world-class education rooted in Indian values.
+              </p>
+              <div class="slider-btn mt-30 d-flex flex-wrap justify-content-center justify-content-md-start gap-2">
+                <a href="{% url 'base:about' %}" class="btn ss-btn" data-animation="fadeInLeft" data-delay=".4s">
+                  Discover More <i class="fal fa-long-arrow-right"></i>
+                </a>
+                <a href="{% url 'base:contact' %}" class="btn ss-btn active" data-animation="fadeInLeft" data-delay=".4s">
+                  Contact Us <i class="fal fa-long-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-5 col-md-5 col-sm-12 p-relative"></div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="single-slider slider-bg" style="background-image: url('{% static 'img/bg/final-768x1024.jpg' %}'); background-size: cover; background-position: center;">
+      <div class="container">
+        <div class="row align-items-center">
+
+          <div class="col-lg-7 col-md-7 col-sm-12">
+            <div class="slider-content s-slider-content mt-130 text-center text-md-start">
+              <h5 data-animation="fadeInUp" data-delay=".4s">Welcome To Prajnavahini Global School</h5>
+              <h2 data-animation="fadeInUp" data-delay=".4s">Education is the best key success in life</h2>
+              <p data-animation="fadeInUp" data-delay=".6s">
+                To nurture Compassionate, Curious, and Confident global citizens through world-class education rooted in Indian values.
+              </p>
+              <div class="slider-btn mt-30 d-flex flex-wrap justify-content-center justify-content-md-start gap-2">
+                <a href="{% url 'base:about' %}" class="btn ss-btn" data-animation="fadeInLeft" data-delay=".4s">
+                  Discover More <i class="fal fa-long-arrow-right"></i>
+                </a>
+                <a href="{% url 'base:contact' %}" class="btn ss-btn active" data-animation="fadeInLeft" data-delay=".4s">
+                  Contact Us <i class="fal fa-long-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-5 col-md-5 col-sm-12 p-relative"></div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+  <!-- Meet Our Leaders -->
+<section class="message-section py-5" style="background-color: #ffffff;">
+  <div class="container text-center">
+    <div class="section-title mb-5">
+      <div class="s-about-img p-relative wow fadeInLeft animated" data-animation="fadeInLeft" data-delay=".4s">
+        <h1 class="fw-bold" style="color: #021341;">Meet Our Leaders</h1>
+      </div>
+    </div>
+
+    <div class="row">
+      {% for leader in leader_messages %}
+      <div class="col-lg-6 col-md-12 mb-4">
+        <div class="leader-card text-center">
+          {% if leader.photo %}<img src="{{ leader.photo.url }}" class="leader-img" alt="{{ leader.name }}">{% endif %}
+          <h4>{{ leader.name }}</h4>
+          <p class="designation">{{ leader.designation }}</p>
+          {{ leader.bio|linebreaks }}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endblock %}

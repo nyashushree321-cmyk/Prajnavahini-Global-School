@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Facilities - Prajnavahini Global School{% endblock %}
+{% block content %}
+<section class="campus-section">
+    <div class="campus-container">
+       <div class="col-lg-12 text-center mb-50">
+
+     <div class="section-title wow fadeInDown animated" data-animation="fadeInDown" data-delay=".4s">
+          <h2 style="color: #ff7350;">Where Comfort Meets Innovation</h2>
+            <p>Safe, dynamic, and well-equipped spaces for overall development</p>
+        </div>
+</div>
+        <ul class="campus-points wow fadeInDown animated" data-animation="fadeInDown" data-delay=".4s">
+    {% for item in facilities %}
+    <li>{% if item.image %}<img src="{{ item.image.url }}" alt="">{% endif %} <span>{{ item.caption }}</span></li>
+    {% endfor %}
+</ul>
+
+    </div>
+</section>
+{% endblock %}

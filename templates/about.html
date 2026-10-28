@@ -1,0 +1,614 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}About Us - Prajnavahini Global School{% endblock %}
+{% block content %}
+             <!-- service-area -->
+            <section class="service-details-two p-relative">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-4 col-md-12 col-sm-12">
+                            <div class="services-box07">
+
+                             <div class="sr-contner">
+                                <div class="icon">
+                                <img src="{% static 'img/icon/sve-icon4.png' %}" alt="icon01">
+                                </div>
+                                <div class="text">
+
+                                    <h5><a href="{% url 'base:about' %}">Integrated Curriculum</a></h5>
+                                    <p>  Languages, Numeracy, Visual Arts, Nature and Movement are blended
+                                          seamlessly</p>
+                                    <a href="{% url 'base:about' %}">Read More <i class="fal fa-long-arrow-right"></i></a>
+                                </div>
+                             </div>
+
+
+                            </div>
+                        </div>
+                         <div class="col-lg-4 col-md-12 col-sm-12">
+                            <div class="services-box07 active">
+                                <div class="sr-contner">
+                                <div class="icon">
+                                <img src="{% static 'img/icon/sve-icon5.png' %}" alt="icon01">
+                                </div>
+                                <div class="text">
+
+
+                                    <h5><a href="{% url 'base:about' %}">Global Outlook with Indian Roots</a></h5>
+                                    <p> Exposure to multicultural ideas while celebrating Indian festivals,languages and values</p>
+                                    <a href="{% url 'base:about' %}">Read More <i class="fal fa-long-arrow-right"></i></a>
+                                </div>
+                             </div>
+
+                            </div>
+                        </div>
+
+					 <div class="col-lg-4 col-md-12 col-sm-12">
+                            <div class="services-box07">
+                                <div class="sr-contner">
+                                <div class="icon">
+                                <img src="{% static 'img/icon/sve-icon6.png' %}" alt="icon01">
+                                </div>
+                                <div class="text">
+
+                                    <h5><a href="{% url 'base:about' %}">Respectful Teaching</a></h5>
+                                    <p>       Teachers serve as guides and facilitators, nurturing and respecting each child’s
+                                    individuality</p>
+                                    <a href="{% url 'base:about' %}">Read More <i class="fal fa-long-arrow-right"></i></a>
+                                </div>
+                             </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <section class="about-area about-p pt-120 pb-120 p-relative fix" style="background: #eff7ff;">
+                <div class="animations-02"><img src="{% static 'img/bg/an-img-02.png' %}" alt="contact-bg-an-01"></div>
+                <div class="container">
+                    <div class="row justify-content-center align-items-center">
+                         <div class="col-lg-6 col-md-12 col-sm-12">
+                            <div class="s-about-img p-relative  wow fadeInLeft animated" data-animation="fadeInLeft" data-delay=".4s">
+                                <img src="{% static 'img/features/hero-img--1152x1536.jpg' %}" alt="img">
+                            </div>
+
+
+                        </div>
+
+					<div class="col-lg-6 col-md-12 col-sm-12">
+                            <div class="about-content s-about-content pl-15 wow fadeInRight  animated" data-animation="fadeInRight" data-delay=".4s">
+                                <div class="about-title second-title pb-25">
+                                    <h5><i class="fal fa-graduation-cap"></i> About Our School</h5>
+                                </div>
+                                    <p class="txt-clr">
+                                        At Prajnavahini Global School, learning goes beyond textbooks to create meaningful, real-life experiences. We focus on shaping confident, compassionate, and capable individuals through a nurturing and inclusive environment.
+                                        <br><br>
+                                        Located at Sir M. Vishweshvaraya Layout, Bengaluru, PGS offers a strong Integrated Pre-Primary program based on global methodologies. We encourage curiosity, independence, and foundational skills through experiential learning.
+                                        <br><br>
+                                          <div class="about-content2">
+                                    <div class="row">
+                                    <div class="col-md-12">
+                                     <ul class="green2">
+                                                <li><div class="abcontent"><div class="ano"><span>01</span></div> <div class="text"><h3>Child-Centered Learning</h3> <p>Each child progresses at their own pace.</p></div></div></li>
+                                                <li><div class="abcontent"><div class="ano"><span>02</span></div> <div class="text"><h3>Play-Based & Experiential</h3> <p>Emphasis on hands-on, sensory-rich experiences.</p></div></div></li>
+
+                                           </ul>
+                                    </div>
+                                    </div>
+                                </div>
+                                 <div class="slider-btn mt-20">
+                                     <a href="{% url 'base:about' %}" class="btn ss-btn smoth-scroll">Read More <i class="fal fa-long-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+ <section class="infrastructure py-5" style="background-color: #f8f9fc;">
+  <div class="container">
+    <div class="text-center mb-5">
+      <div class="section-title center-align mb-50 wow fadeInDown animated" data-animation="fadeInDown" data-delay=".4s">
+        <h2 style="color: #ff7350; font-weight: 700;">Infrastructure at Prajnavahini Global School</h2>
+      </div>
+      <p style="max-width: 750px; margin: 0 auto; color: #555;">
+        Our thoughtfully designed campus provides a secure, nurturing, and stimulating learning environment for young minds to thrive.
+      </p>
+    </div>
+
+    <div class="row gy-4">
+      {% for item in infra_features %}
+      <div class="col-lg-4 col-md-6">
+        <div class="infra-item p-4 h-100 text-center"
+             style="background:{{ item.background_color }}; border-radius:10px; box-shadow:0 3px 10px rgba(0,0,0,0.05); color:#fff;">
+          <div class="about-content s-about-content pl-15 wow fadeInRight animated" data-animation="fadeInRight" data-delay=".4s">
+            <h4 style="color:#fff;">{{ item.title }}</h4>
+            {% if item.image %}
+            <img src="{{ item.image.url }}" alt="{{ item.title }}"
+                        style="width:100%; height:180px; object-fit:cover; border-radius:8px; margin:10px 0;">
+            {% endif %}
+            <p>{{ item.description }}</p>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="vision-mission-cards pt-120 pb-100" style="background: #ffffff;">
+  <div class="container">
+    <div class="row justify-content-center mb-60 text-center">
+      <div class="col-lg-8">
+    <div class="section-title center-align mb-50 wow fadeInDown animated" data-animation="fadeInDown" data-delay=".4s">
+
+        <h5 style="color: #ff7350;">Our Philosophy</h5>
+        <h2 style="color: #021341;">Vision & Mission</h2>
+        <p class="mt-3" style="color: #555;">
+          We believe that true education goes beyond academics — it shapes minds, values, and purpose.
+        </p>
+      </div>
+    </div>
+</div>
+    <div class="row g-4 justify-content-center">
+      <!-- Vision Card -->
+      <div class="col-lg-5 col-md-6">
+        <div class="card h-100 text-center p-4 shadow-sm border-0 rounded-3" style="background: #125875">
+          <div class="icon mb-3">
+            <i class="bi bi-eye-fill" style="font-size: 48px; color: #021341;"></i>
+          </div>
+                        <div class="s-about-img p-relative  wow fadeInLeft animated" data-animation="fadeInLeft" data-delay=".4s">
+
+          <h3 class="mb-3" style="color: #fff;">Our Vision</h3>
+          <p style="color: #fff; font-size: 20px;">
+            <br>
+                We nurture happy, confident, and curious young learners to explore, grow, and shine in a caring environment.
+
+          </br></p>
+        </div>
+      </div>
+</div>
+      <!-- Mission Card -->
+      <div class="col-lg-5 col-md-6">
+        <div class="card h-100 text-center p-4 shadow-sm border-0 rounded-3" style="background: #ff7350;">
+          <div class="icon mb-3">
+            <i class="bi bi-bullseye" style="font-size: 48px; color: #ff7350"></i>
+          </div>
+            <div class="s-about-img p-relative  wow fadeInLeft animated" data-animation="fadeInRight" data-delay=".4s">
+
+          <h3 class="mb-3" style="color: #fff;">Our Mission</h3>
+
+          <p style="color: #fff; font-size: 20px;">
+            <br>
+           Prajnavahini Global School provides a nurturing and innovative learning environment that fosters creativity, collaboration, and confidence, shaping compassionate and capable young learners.
+
+          </p>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<section class="objectives py-5">
+  <div class="container">
+    <div class="text-center mb-4">
+        <div class="section-title center-align mb-50 wow fadeInDown animated" data-animation="fadeInDown" data-delay=".4s">
+      <h2 style="color: #ff7350;">Our Objectives</h2>
+      <p>We aim to nurture holistic development through education and values.</p>
+    </div>
+</div>
+    <div class="row">
+      <div class="col-lg-6 col-md-6 mb-3">
+        <div class="objective-box p-3" style="background: #ff7350; border-radius: 8px; color: #fff;">
+                                    <div class="s-about-img p-relative  wow fadeInLeft animated" data-animation="fadeInLeft" data-delay=".4s">
+
+          <h4 style="color: #fff;">1. Foster Holistic Development</h4>
+          <p>We aim to nurture every aspect of a child’s growth — intellectual, emotional, physical, and ethical.
+             Our programs are designed to develop well-rounded individuals who balance academic achievement with creativity, confidence, and compassion.</p>
+        </div>
+      </div>
+      </div>
+
+      <div class="col-lg-6 col-md-6 mb-3">
+
+        <div class="objective-box p-3" style="background:#125875 ; border-radius: 8px; color: #fff; ">
+                  <div class="about-content s-about-content pl-15 wow fadeInRight  animated" data-animation="fadeInRight" data-delay=".4s">
+
+          <h4 style="color: #fff;">2. Cultivate Global Competence with Indian Roots</h4>
+          <p>We prepare our students to engage confidently in a global environment while staying grounded
+             in Indian values and culture. Through an internationally aligned curriculum blended with traditional
+              wisdom. </p>
+        </div>
+      </div>
+</div>
+      <div class="col-lg-6 col-md-6 mb-3">
+        <div class="objective-box p-3" style="background: #125875; border-radius: 8px; color: #fff;">
+ <div class="s-about-img p-relative  wow fadeInLeft animated" data-animation="fadeInLeft" data-delay=".4s">
+
+          <h4 style="color: #fff;">3. Promote Inquiry, Innovation, and Critical Thinking</h4>
+          <p>We encourage curiosity and questioning in every classroom. By promoting hands-on learning,
+            research projects, and creative exploration, we help students develop problem-solving skills
+            and the courage to innovate.</p>
+        </div>
+      </div>
+</div>
+      <div class="col-lg-6 col-md-6 mb-3">
+        <div class="objective-box p-3" style="background: #ff7350; border-radius: 8px; color: #fff;">
+                                    <div class="s-about-img p-relative  wow fadeInLeft animated" data-animation="fadeInLeft" data-delay=".4s">
+
+          <h4 style="color: #fff;">4.Ensure Inclusive and Student-Centered Learning</h4>
+          <p>We believe every child learns differently. Our teaching approach is flexible, inclusive, and personalized — ensuring that every learner feels valued, supported, and motivated to reach their full potential.</p>
+        </div>
+    </div>
+    </div>
+    </div>
+  </div>
+</section>
+                  <!-- cta-area -->
+            <section class="cta-area cta-bg pt-30 pb-30" style="background:#021341;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <div class="section-title cta-title wow fadeInLeft animated" data-animation="fadeInDown animated" data-delay=".2s">
+                                <h2>How to Enroll Your Child to a Class?</h2>
+								<p style="color: #eaeaea;">At Prajnavahini Global School, learning goes beyond textbooks and classrooms. Our distinctive approach combines academic excellence with real-life experiences to shape confident, compassionate, and capable individuals. </p>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-4 text-right">
+                            <div class="cta-btn s-cta-btn wow fadeInRight animated" data-animation="fadeInDown animated" data-delay=".2s">
+								  <a href="{% url 'base:login' %}" class="btn ss-btn smoth-scroll">Enrollment Now <i class="fal fa-long-arrow-right"></i></a>
+							</div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+                <!-- video-area -->
+            <section id="video" class="video-area p-relative">
+                <div class="container">
+                     <div class="row">
+                        <div class="col-12">
+                            <div class="s-video-wrap" style="background-image:url({% static 'img/bg/ready.jpg' %})">
+                                <div class="s-video-content text-center">
+                                    <h2>Are You Ready To Love Preschool </h2>
+                                    <p>Lanunch Your Start Now</p>
+                                   <h6></h6>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+                <!-- counter-area -->
+            <div class="counter-area pb-90" style="background:#da4a47;">
+                <div class="container">
+                </div>
+            </div>
+             <!-- steps-area -->
+            <section class="steps-area p-relative"  style="background-color: #032e3f;">
+                <div class="animations-10"><img src="{% static 'img/bg/an-img-10.png' %}" alt="an-img-01"></div>
+                <div class="container">
+
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 col-md-12">
+                            <div class="section-title mb-35 wow fadeInDown animated" data-animation="fadeInDown" data-delay=".4s">
+                                <h2>How We Are Different</h2>
+                                <p>At Prajnavahini Global School, learning goes beyond textbooks and classrooms. Our distinctive approach combines academic excellence with real-life experiences to shape confident, compassionate, and capable individuals.</p>
+                            </div>
+                            <ul class="pr-20">
+                                <li>
+                                    <div class="step-box wow fadeInUp animated" data-animation="fadeInUp" data-delay=".4s">
+                                        <div class="dnumber">
+                                            <div class="date-box"><img src="{% static 'img/icon/fea-icon01.png' %}" alt="icon"></div>
+                                        </div>
+                                        <div class="text">
+                                            <h3> Family Values</h3>
+                                            <p>We uphold and instill strong Indian family values, nurturing and respect,empathy and a deep sense of belonging in every child</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="step-box wow fadeInUp animated" data-animation="fadeInUp" data-delay=".4s">
+                                        <div class="dnumber">
+                                             <div class="date-box"><img src="{% static 'img/icon/fea-icon02.png' %}" alt="icon"></div>
+                                        </div>
+                                        <div class="text">
+                                            <h3>Project-Based Learning</h3>
+                                            <p>We bring learning to life through hands-on projects rooted in real-time scenarios—cooking, gardening, DIY activities and enriching field trips that spark curiosity and creativity</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="step-box wow fadeInUp animated" data-animation="fadeInUp" data-delay=".4s">
+                                        <div class="dnumber">
+                                           <div class="date-box"><img src="{% static 'img/icon/fea-icon03.png' %}" alt="icon"></div>
+                                        </div>
+                                        <div class="text">
+                                            <h3>Balanced use of Technology</h3>
+                                            <p>We embrace technology thoughtfully—enhancing learning while ensuring children stay connected to the real world and each other. At Prajnavahini, we don’t just prepare students for exams—we prepare them for life</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-6 col-md-12">
+                            <div class="step-img wow fadeInLeft animated" data-animation="fadeInLeft" data-delay=".4s">
+                                <img src="{% static 'img/bg/final-768x1024 (1).jpg' %}" alt="class image">
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </section>
+            <!-- steps-area-end -->
+
+            <!-- cta-area -->
+            <section class="cta-area cta-bg pt-50 pb-50" style="background-image:url({% static 'img/bg/cta_bg02.png' %})">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="section-title cta-title wow fadeInLeft animated" data-animation="fadeInDown animated" data-delay=".2s">
+                                <h2>PGS believes in the Holistic Developement of the Child</h2>
+								<p style="color: #e7f0f8;">We believe that learning should not be limited to books or only in classrooms.
+For holistic development of learners, it is important that they interact and build
+a rapport with peers and acquire important social skills. Participating in various
+games, competitions and events enhances collaborative and cognitive skills of
+students</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- cta-area-end -->
+              <!-- steps-area -->
+            <section class="steps-area2 p-relative fix"  style="background-color: #125875;">
+                <div class="animations-02"><img src="{% static 'img/bg/an-img-10.png' %}" alt="an-img-01"></div>
+                <div class="container">
+
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 col-md-12">
+                            <div class="step-box step-box2 wow fadeInUp animated" data-animation="fadeInUp" data-delay=".4s">
+                                <div class="dnumber">
+                                    <div class="date-box"><img src="{% static 'img/icon/fea-icon01.png' %}" alt="icon"></div>
+                                </div>
+                                <div class="text">
+                                    <h2>Daycare Centre</h2>
+                                    <p>Prajnavahini Global School is a one-step solution for all your
+child’s needs. We have safe, secure, and structured Day
+Care. The sole purpose of day care is to provide a
+comfortable environment for the children that enhances
+their learning capability without any hindrance.
+</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-12">
+                            <div class="step-img2 wow fadeInLeft animated" data-animation="fadeInLeft" data-delay=".4s">
+                                <img src="{% static 'img/bg/svr-(new)768x576 (1).jpg' %}" alt="class image">
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </section>
+            <!-- steps-area-end -->
+             <!-- steps-area -->
+            <section class="steps-area2 p-relative fix"  style="background-color: #032e3f;">
+                <div class="container">
+                    <div class="animations-08"><img src="{% static 'img/bg/an-img-20.png' %}" alt="contact-bg-an-01"></div>
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 col-md-12">
+                            <div class="step-img3 wow fadeInLeft animated" data-animation="fadeInLeft" data-delay=".4s">
+                                <img src="{% static 'img/bg/ACTIVITY-(new)ROOM-768x1024 (1).jpg' %}" alt="class image">
+                            </div>
+
+                        </div>
+                         <div class="col-lg-6 col-md-12">
+                            <div class="step-box step-box3 wow fadeInUp animated" data-animation="fadeInUp" data-delay=".4s">
+                                <div class="dnumber">
+                                    <div class="date-box"><img src="{% static 'img/icon/fea-icon03.png' %}" alt="icon"></div>
+                                </div>
+                                <div class="text">
+                                    <h2>Activity Room</h2>
+                                    <p>The activity room provides a stimulating environment for
+children and aids in spontaneous learning. This area is
+designed to encourage students to become creative thinkers.
+The activity room gives real-time exposure to children to
+express their feelings and learn to listen to others. The core
+idea of this activity area is to engage the children by providing
+them with an environment that includes a Play area, a STEM
+lab, Dance and Music bring them joy, happiness and creativity</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
+            <!-- steps-area-end -->
+            <!-- admission-area -->
+            <section class="about-area about-p pt-120 pb-120 p-relative fix" style="background-image:url({% static 'img/bg/admission_bg.png' %}); background-repeat: no-repeat; background-position: top;">
+                <div class="container">
+                    <div class="row justify-content-center align-items-center">
+                         <div class="col-lg-6 col-md-12 col-sm-12">
+                            <div class="s-about-img p-relative  wow fadeInLeft animated" data-animation="fadeInLeft" data-delay=".4s">
+                                <img src="{% static 'img/bg/screenshot (68).png' %}" alt="img">
+                            </div>
+                        </div>
+
+					<div class="col-lg-6 col-md-12 col-sm-12">
+                            <div class="about-content s-about-content pl-15 wow fadeInRight  animated" data-animation="fadeInRight" data-delay=".4s">
+                                <div class="about-title second-title pb-25">
+                                    <h2>Prajnavahini Global School Transport</h2>
+                                </div>
+                                   <p class="txt-clr">Our Transport fleet consist of comfortable, air conditioned buses to pick up and drop off students. Only
+experienced and qualified drivers are appointed after
+undergoing a driving test to ensure safety of our students</p>
+
+
+                                 <div class="slider-btn mt-20">
+                                     <a href="{% url 'base:about' %}" class="btn ss-btn smoth-scroll">Read More <i class="fal fa-long-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            <!-- admission-area-end -->
+               <!-- services-area -->
+            <section id="services" class="services-area pt-120 pb-90 fix">
+                <div class="container">
+                   <div class="row">
+                         <div class="col-lg-12">
+                            <div class="section-title text-center mb-50 wow fadeInDown animated" data-animation="fadeInDown" data-delay=".4s">
+                                <h5><i class="fal fa-graduation-cap"></i> Contact Info</h5>
+                                <h2>
+                                 Get In Touch
+                                </h2>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="row">
+                         <div class="col-lg-4 col-md-4">
+
+                          <div class="services-box text-center">
+                              <div class="services-icon">
+                                   <img src="{% static 'img/bg/contact-icon01.png' %}" alt="image">
+                                </div>
+                               <div class="services-content2">
+                                    <h5><a href="tel:+14440008888">+91 9480040338</a></h5>
+                                    <p>Phone Support</p>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="col-lg-4 col-md-4">
+
+                          <div class="services-box text-center active">
+                              <div class="services-icon">
+                                  <img src="{% static 'img/bg/contact-icon02.png' %}" alt="image">
+                                </div>
+                               <div class="services-content2">
+                                    <h5><a href="mailto:jobs@webtrueexample.com">info@pgssmv.com</a></h5>
+                                     <p>Email Address</p>
+
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="col-lg-4 col-md-4">
+
+                          <div class="services-box text-center">
+                              <div class="services-icon">
+                                 <img src="{% static 'img/bg/contact-icon03.png' %}" alt="image">
+                                </div>
+                               <div class="services-content2">
+                                    <h5 style="font-size: 18px;">#9, 9 Block Extension, Sir M Vishwehwaraiah layout 560056</h5>
+                                    <p>School Address</p>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            <!-- services-area-end -->
+            <!-- map-area-end -->
+            <div class="map fix" style="background: #f5f5f5;">
+                <div class="container-flud">
+
+                    <div class="row">
+                        <div class="col-lg-12">
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d124421.91996548296!2d77.488679!3d12.960011000000002!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3f39f70fa8f3%3A0x14e7e4f48a4444d3!2sPrajnavahini%20Global%20School!5e0!3m2!1sen!2sus!4v1762332949365!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                    </div>
+                </div>
+            </div>
+	     <!-- map-area-end -->
+             <!-- contact-area -->
+            <section id="contact" class="contact-area after-none contact-bg pt-120 pb-120 p-relative fix" style="background: #e7f0f8;">
+
+                <div class="container">
+
+					<div class="row">
+
+
+                        <div class="col-lg-12 order-2">
+                            <div class="contact-bg">
+                            <div class="section-title center-align text-center mb-50">
+                                <h2>
+                                   Student Enquire Form
+                                </h2>
+
+                            </div>
+
+							<form action="{% url 'base:contact_submit' %}" method="post" class="contact-form mt-30 text-center">
+								{% csrf_token %}
+								<input type="hidden" name="source_page" value="about">
+								<div class="row">
+                            <div class="col-lg-4">
+                                <div class="contact-field p-relative c-name mb-30">
+                                    <input type="text" id="firstn" name="name" placeholder="First Name" required>
+                                    <i class="icon fal fa-user"></i>
+                                </div>
+                            </div>
+								<div class="col-lg-4">
+                                <div class="contact-field p-relative c-subject mb-30">
+                                    <input type="email" id="email" name="email" placeholder="Email" required>
+                                    <i class="icon fal fa-envelope"></i>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="contact-field p-relative c-subject mb-30">
+                                    <input type="text" id="phone" name="phone" placeholder="Phone No." required>
+                                     <i class="icon fal fa-phone"></i>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="contact-field p-relative c-message mb-30">
+                                    <textarea name="message" id="message" cols="30" rows="50" placeholder="Write comments"></textarea>
+                                     <i class="icon fal fa-edit"></i>
+                                </div>
+                                <div class="slider-btn  text-center">
+                                            <button class="btn ss-btn" type="submit" data-animation="fadeInRight" data-delay=".8s">Make An Request <i class="fal fa-long-arrow-right"></i></button>
+                                        </div>
+                            </div>
+                            </div>
+
+                    </form>
+
+                            </div>
+
+						</div>
+					</div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- contact-area-end -->
+{% endblock %}

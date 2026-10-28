@@ -1,0 +1,304 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Prajnavahini Global School{% endblock %}
+{% block content %}
+   <!-- slider-area -->
+ <section id="home" class="slider-area fix p-relative">
+  <div class="slider-active" style="background: #021341;">
+
+    <!-- Single Slide -->
+    <div class="single-slider slider-bg" style="background-image: url('{% static 'img/slider/slider_img02.png' %}'); background-size: cover; background-position: center;">
+      <div class="container">
+        <div class="row align-items-center">
+
+          <div class="col-lg-7 col-md-7 col-sm-12">
+            <div class="slider-content s-slider-content mt-130 text-center text-md-start">
+              <h5 data-animation="fadeInUp" data-delay=".4s">Welcome To Prajnavahini Global School</h5>
+              <h2 data-animation="fadeInUp" data-delay=".4s">Education is the best key success in life</h2>
+              <p data-animation="fadeInUp" data-delay=".6s">
+                To nurture Compassionate, Curious, and Confident global citizens through world-class education rooted in Indian values.
+              </p>
+              <div class="slider-btn mt-30 d-flex flex-wrap justify-content-center justify-content-md-start gap-2">
+                <a href="{% url 'base:about' %}" class="btn ss-btn" data-animation="fadeInLeft" data-delay=".4s">
+                  Discover More <i class="fal fa-long-arrow-right"></i>
+                </a>
+                <a href="{% url 'base:contact' %}" class="btn ss-btn active" data-animation="fadeInLeft" data-delay=".4s">
+                  Contact Us <i class="fal fa-long-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-5 col-md-5 col-sm-12 p-relative"></div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Second Slide -->
+    <div class="single-slider slider-bg" style="background-image: url('{% static 'img/bg/final-768x1024.jpg' %}'); background-size: cover; background-position: center;">
+      <div class="container">
+        <div class="row align-items-center">
+
+          <div class="col-lg-7 col-md-7 col-sm-12">
+            <div class="slider-content s-slider-content mt-130 text-center text-md-start">
+              <h5 data-animation="fadeInUp" data-delay=".4s">Welcome To Prajnavahini Global School</h5>
+              <h2 data-animation="fadeInUp" data-delay=".4s">Education is the best key success in life</h2>
+              <p data-animation="fadeInUp" data-delay=".6s">
+                To nurture Compassionate, Curious, and Confident global citizens through world-class education rooted in Indian values.
+              </p>
+              <div class="slider-btn mt-30 d-flex flex-wrap justify-content-center justify-content-md-start gap-2">
+                <a href="{% url 'base:about' %}" class="btn ss-btn" data-animation="fadeInLeft" data-delay=".4s">
+                  Discover More <i class="fal fa-long-arrow-right"></i>
+                </a>
+                <a href="{% url 'base:contact' %}" class="btn ss-btn active" data-animation="fadeInLeft" data-delay=".4s">
+                  Contact Us <i class="fal fa-long-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-5 col-md-5 col-sm-12 p-relative"></div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+            <!-- slider-area-end -->
+             <!-- service-area -->
+            <section class="service-details-two p-relative">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-4 col-md-12 col-sm-12">
+                            <div class="services-box07">
+
+                             <div class="sr-contner">
+                                <div class="icon">
+                                <img src="{% static 'img/icon/sve-icon4.png' %}" alt="icon01">
+                                </div>
+                                <div class="text">
+
+                                    <h5><a href="{% url 'base:about' %}">Integrated Curriculum</a></h5>
+                                    <p>  Languages, Numeracy, Visual Arts, Nature and Movement are blended
+                                      seamlessly</p>
+                                    <a href="{% url 'base:about' %}">Read More <i class="fal fa-long-arrow-right"></i></a>
+                                </div>
+                             </div>
+
+
+                            </div>
+                        </div>
+                         <div class="col-lg-4 col-md-12 col-sm-12">
+                            <div class="services-box07 active">
+                                <div class="sr-contner">
+                                <div class="icon">
+                                <img src="{% static 'img/icon/sve-icon5.png' %}" alt="icon01">
+                                </div>
+                                <div class="text">
+
+
+                                    <h5><a href="{% url 'base:about' %}">Global Outlook with Indian Roots</a></h5>
+                                    <p> Exposure to multicultural ideas while celebrating Indian festivals,languages and values</p>
+                                    <a href="{% url 'base:about' %}">Read More <i class="fal fa-long-arrow-right"></i></a>
+                                </div>
+                             </div>
+
+                            </div>
+                        </div>
+
+					 <div class="col-lg-4 col-md-12 col-sm-12">
+                            <div class="services-box07">
+                                <div class="sr-contner">
+                                <div class="icon">
+                                <img src="{% static 'img/icon/sve-icon6.png' %}" alt="icon01">
+                                </div>
+                                <div class="text">
+
+                                    <h5><a href="{% url 'base:about' %}">Respectful Teaching</a></h5>
+                                    <p>       Teachers serve as guides and facilitators, nurturing and respecting each child’s
+                                    individuality</p>
+                                    <a href="{% url 'base:about' %}">Read More <i class="fal fa-long-arrow-right"></i></a>
+                                </div>
+                             </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+           <section class="infrastructure py-5" style="background-color: #f8f9fc;">
+  <div class="container">
+    <div class="text-center mb-5">
+      <div class="section-title center-align mb-50 wow fadeInDown animated" data-animation="fadeInDown" data-delay=".4s">
+        <h2 style="color: #ff7350; font-weight: 700;">Infrastructure at Prajnavahini Global School</h2>
+      </div>
+      <p style="max-width: 750px; margin: 0 auto; color: #555;">
+        Our thoughtfully designed campus provides a secure, nurturing, and stimulating learning environment for young minds to thrive.
+      </p>
+    </div>
+
+    <div class="row gy-4">
+      {% for item in infra_features %}
+      <div class="col-lg-4 col-md-6">
+        <div class="infra-item p-4 h-100 text-center"
+             style="background:{{ item.background_color }}; border-radius:10px; box-shadow:0 3px 10px rgba(0,0,0,0.05); color:#fff;">
+          <div class="about-content s-about-content pl-15 wow fadeInRight animated" data-animation="fadeInRight" data-delay=".4s">
+            <h4 style="color:#fff;">{{ item.title }}</h4>
+            {% if item.image %}
+            <img src="{{ item.image.url }}" alt="{{ item.title }}"
+                        style="width:100%; height:180px; object-fit:cover; border-radius:8px; margin:10px 0;">
+            {% endif %}
+            <p>{{ item.description }}</p>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+            <section class="message-section py-5" style="background-color: #ffffff;">
+  <div class="container text-center" data-animation="fadeInRight" data-delay=".4s">
+
+    <div class="section-title mb-3">
+         <div class="s-about-img p-relative  wow fadeInLeft animated" data-animation="fadeInLeft" data-delay=".4s">
+      <h1 class="fw-bold" style="color: #021341;">Meet Our Leaders</h1>
+    </div>
+</div>
+  </div>
+</section>
+
+<section class="leaders-section py-3">
+    <div class="container">
+        <div class="row">
+            {% for leader in leader_messages %}
+            <div class="col-lg-6 col-md-12 mb-4">
+                <div class="leader-card text-center">
+                    {% if leader.photo %}<img src="{{ leader.photo.url }}" class="leader-img" alt="{{ leader.name }}">{% endif %}
+                    <h4>{{ leader.name }}</h4>
+                    <p style="color: #245b73;" class="designation">{{ leader.designation }}</p>
+                    {{ leader.bio|linebreaks }}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+                  <!-- cta-area -->
+            <section class="cta-area cta-bg pt-30 pb-30" style="background:#021341;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <div class="section-title cta-title wow fadeInLeft animated" data-animation="fadeInDown animated" data-delay=".2s">
+                                <h2>How to Enroll Your Child to a Class?</h2>
+								<p style="color: #eaeaea;">At Prajnavahini Global School, learning goes beyond textbooks and classrooms. Our distinctive approach combines academic excellence with real-life experiences to shape confident, compassionate, and capable individuals. </p>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-4 text-right">
+                            <div class="cta-btn s-cta-btn wow fadeInRight animated" data-animation="fadeInDown animated" data-delay=".2s">
+								  <a href="{% url 'base:about' %}" class="btn ss-btn smoth-scroll">Enrollment Now <i class="fal fa-long-arrow-right"></i></a>
+							</div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+               <!-- services-area -->
+            <section id="services" class="services-area pt-120 pb-90 fix">
+                <div class="container">
+                   <div class="row">
+                         <div class="col-lg-12">
+                            <div class="section-title text-center mb-50 wow fadeInDown animated" data-animation="fadeInDown" data-delay=".4s">
+                                <h5><i class="fal fa-graduation-cap"></i> Contact Info</h5>
+                                <h2>
+                                 Get In Touch
+                                </h2>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="row">
+                         <div class="col-lg-4 col-md-4">
+
+                          <div class="services-box text-center">
+                              <div class="services-icon">
+                                   <img src="{% static 'img/bg/contact-icon01.png' %}" alt="image">
+                                </div>
+                               <div class="services-content2">
+                                    <h5><a href="tel:+14440008888">+91 9480040338</a></h5>
+                                    <p>Phone Support</p>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="col-lg-4 col-md-4">
+
+                          <div class="services-box text-center active">
+                              <div class="services-icon">
+                                  <img src="{% static 'img/bg/contact-icon02.png' %}" alt="image">
+                                </div>
+                               <div class="services-content2">
+                                    <h5><a href="mailto:jobs@webtrueexample.com">info@pgssmv.com</a></h5>
+                                     <p>Email Address</p>
+
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="col-lg-4 col-md-4">
+
+                          <div class="services-box text-center">
+                              <div class="services-icon">
+                                 <img src="{% static 'img/bg/contact-icon03.png' %}" alt="image">
+                                </div>
+                               <div class="services-content2">
+                                    <h5 style="font-size: 18px;">#9, 9 Block Extension, Sir M Vishwehwaraiah layout 560056</h5>
+                                    <p>School Address</p>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            <!-- services-area-end -->
+            <!-- map-area-end -->
+            <div class="map fix" style="background: #f5f5f5;">
+                <div class="container-flud">
+
+                    <div class="row">
+                        <div class="col-lg-12">
+<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d124421.91996548296!2d77.488679!3d12.960011000000002!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3f39f70fa8f3%3A0x14e7e4f48a4444d3!2sPrajnavahini%20Global%20School!5e0!3m2!1sen!2sus!4v1762332949365!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                    </div>
+                </div>
+            </div>
+	     <!-- map-area-end -->
+{% endblock %}
+
+{% block popup %}
+    <!-- Popup Toggle -->
+    <input type="checkbox" id="popup-toggle" checked hidden>
+
+    <!-- Popup -->
+    <div class="popup">
+    <div class="popup-content">
+
+        <img src="{% static 'img/popup/pop_up.png' %}" alt="Admission Poster">
+
+        <label for="popup-toggle" class="close-btn">OK</label>
+    </div>
+    </div>
+{% endblock %}

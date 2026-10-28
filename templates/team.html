@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Mentors and Advisors - Prajnavahini Global School{% endblock %}
+{% block content %}
+<section class="team-area2 fix p-relative pt-120 pb-80">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center mb-50">
+        <div class="section-title wow fadeInDown animated" data-animation="fadeInDown" data-delay=".4s">
+
+<h5 style="color: #ff7350;">Our Mentors and Advisors</h5>
+      <h2 style="color: #021341;">Our Mentors and Advisors</h2>
+        </div>
+      </div>
+    </div>
+
+    {% for mentor in mentors %}
+    <div class="row align-items-center mb-60">
+      <div class="col-lg-5 col-md-12 text-center mb-4 mb-lg-0">
+        <div class="mentor-image">
+                        <div class="s-about-img p-relative  wow fadeInLeft animated" data-animation="fadeInLeft" data-delay=".4s">
+
+          {% if mentor.photo %}<img src="{{ mentor.photo.url }}" alt="{{ mentor.name }}" class="img-fluids rounded shadow">{% endif %}
+          </div>
+
+
+        </div>
+      </div>
+      <div class="col-lg-7 col-md-12">
+       <div class="about-content s-about-content pl-15 wow fadeInRight  animated" data-animation="fadeInRight" data-delay=".4s">
+
+          <h3 class="head">{{ mentor.name }}</h3>
+
+          <p class="img-caption mt-3">{{ mentor.title|linebreaksbr }}</p>
+          <p style="color: #245b73;" class="para">
+          {{ mentor.quote }}
+        </p>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+                  <!-- cta-area -->
+            <section class="cta-area cta-bg pt-30 pb-30" style="background:#021341;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <div class="section-title cta-title wow fadeInLeft animated" data-animation="fadeInDown animated" data-delay=".2s">
+                                <h2>How to Enroll Your Child to a Class?</h2>
+								<p style="color: #eaeaea;">At Prajnavahini Global School, learning goes beyond textbooks and classrooms. Our distinctive approach combines academic excellence with real-life experiences toshapeconfident, compassionate, and capable individuals. </p>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-4 text-right">
+                            <div class="cta-btn s-cta-btn wow fadeInRight animated" data-animation="fadeInDown animated" data-delay=".2s">
+								  <a href="{% url 'base:login' %}" class="btn ss-btn smoth-scroll">Enrollment Now <i class="fal fa-long-arrow-right"></i></a>
+							</div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            <div class="second-header-btn" >
+            <a href="{% url 'base:login' %}" class="btn">admission open</a>
+            </div>
+{% endblock %}

@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Review Your Application - Prajnavahini Global School{% endblock %}
+{% block content %}
+  <div class="container py-5" style="background: #f3f6fb;">
+    <div class="card shadow-lg rounded-4 p-4">
+      <h3 class="text-center mb-4">Review Your Application</h3>
+      <p class="text-center text-muted mb-4">
+        Please verify your details before final submission.
+      </p>
+
+      <div id="reviewData">
+      <h5>Application Details</h5>
+      <ul class="list-group mb-4">
+        <li class="list-group-item">Class Applied For: <strong>{{ application.classApplied }}</strong></li>
+        <li class="list-group-item">Year: <strong>{{ application.year }}</strong></li>
+        <li class="list-group-item">Academic Year: <strong>{{ application.academicYear }}</strong></li>
+      </ul>
+
+      <h5>Personal Details</h5>
+      <ul class="list-group mb-4">
+        <li class="list-group-item">Name of Student: <strong>{{ application.studentName }}</strong></li>
+        <li class="list-group-item">Gender: <strong>{{ application.gender }}</strong></li>
+        <li class="list-group-item">Date of Birth: <strong>{{ application.dob }}</strong></li>
+        <li class="list-group-item">Blood Group: <strong>{{ application.bloodGroup }}</strong></li>
+        <li class="list-group-item">Mother Tongue: <strong>{{ application.motherTongue }}</strong></li>
+        <li class="list-group-item">Place of Birth: <strong>{{ application.birthPlace }}</strong></li>
+        <li class="list-group-item">Nationality: <strong>{{ application.nationality }}</strong></li>
+        <li class="list-group-item">Aadhaar: <strong>{{ application.aadhaar }}</strong></li>
+      </ul>
+
+      <h5>Parent Details</h5>
+      <ul class="list-group mb-4">
+        <li class="list-group-item">Father’s Name: <strong>{{ application.fatherName }}</strong></li>
+        <li class="list-group-item">Mother’s Name: <strong>{{ application.motherName }}</strong></li>
+        <li class="list-group-item">Father Mobile: <strong>{{ application.fatherMobile }}</strong></li>
+        <li class="list-group-item">Mother Mobile: <strong>{{ application.motherMobile }}</strong></li>
+      </ul>
+
+      <h5>Residential Address</h5>
+      <p>{{ application.address }}</p>
+      </div>
+
+      <div class="text-center mt-4">
+        <a href="{% url 'base:application' %}" class="btn btn-outline-secondary px-4 me-3">Edit Form</a>
+        {% if application.confirmed %}
+        <span class="btn btn-success px-4 disabled">Submitted</span>
+        {% else %}
+        <form method="post" action="{% url 'base:dashboard_final_submit' %}" style="display:inline;">
+          {% csrf_token %}
+          <button type="submit" class="btn btn-success px-4" id="finalSubmit">Final Submit</button>
+        </form>
+        {% endif %}
+      </div>
+
+      <p class="text-center text-muted mt-3 small">
+        After final submission, no changes can be made.
+      </p>
+    </div>
+  </div>
+{% endblock %}

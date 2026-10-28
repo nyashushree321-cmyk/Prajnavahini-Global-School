@@ -1,0 +1,113 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Application - Prajnavahini Global School{% endblock %}
+{% block content %}
+       <section class="apply-form-area py-5">
+  <div class="container">
+    <h3 class="text-center mb-4">Application for Registration</h3>
+
+    <form method="post">
+      {% csrf_token %}
+
+      <!-- Application Details -->
+      <h5 class="mb-3">1. Application Details</h5>
+      <div class="row g-3 mb-4">
+        <div class="col-md-4">
+          <label class="form-label">Class Applied For</label>
+          {{ form.classApplied }}
+        </div>
+        <div class="col-md-4">
+          <label class="form-label">Year</label>
+          {{ form.year }}
+        </div>
+        <div class="col-md-4">
+          <label class="form-label">Academic Year</label>
+          {{ form.academicYear }}
+        </div>
+      </div>
+
+      <!-- Personal Details -->
+      <h5 class="mb-3">2. Personal Details</h5>
+      <div class="row g-3 mb-4">
+        <div class="col-md-6">
+          <label class="form-label">Name of Student</label>
+          {{ form.studentName }}
+        </div>
+        <div class="col-md-3">
+          <label class="form-label">Gender</label>
+          {{ form.gender }}
+        </div>
+        <div class="col-md-3">
+          <label class="form-label">Date of Birth</label>
+          {{ form.dob }}
+        </div>
+        <div class="col-md-3">
+          <label class="form-label">Blood Group</label>
+          {{ form.bloodGroup }}
+        </div>
+        <div class="col-md-3">
+          <label class="form-label">Mother Tongue</label>
+          {{ form.motherTongue }}
+        </div>
+        <div class="col-md-3">
+          <label class="form-label">Place of Birth</label>
+          {{ form.birthPlace }}
+        </div>
+        <div class="col-md-3">
+          <label class="form-label">Nationality</label>
+          {{ form.nationality }}
+        </div>
+        <div class="col-md-3">
+          <label class="form-label">Aadhaar Number</label>
+          {{ form.aadhaar }}
+        </div>
+      </div>
+
+      <!-- Parent Details -->
+      <h5 class="mb-3">3. Parent Details</h5>
+      <div class="row g-3 mb-4">
+        <div class="col-md-6">
+          <label class="form-label">Father’s Name</label>
+          {{ form.fatherName }}
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">Mother’s Name</label>
+          {{ form.motherName }}
+        </div>
+        <div class="col-md-3">
+          <label class="form-label">Father Mobile</label>
+          {{ form.fatherMobile }}
+        </div>
+        <div class="col-md-3">
+          <label class="form-label">Mother Mobile</label>
+          {{ form.motherMobile }}
+        </div>
+      </div>
+
+      <!-- Residential Address -->
+      <h5 class="mb-3">4. Residential Address</h5>
+      <div class="mb-3">
+        {{ form.address }}
+      </div>
+
+      <!-- Submit -->
+      <div class="form-check mb-3">
+        {{ form.agree }}
+        <label class="form-check-label" for="{{ form.agree.id_for_label }}">
+          I agree to the rules and confirm the above info is accurate.
+        </label>
+      </div>
+
+      {% if form.errors %}
+      <div class="alert alert-danger">Please correct the errors below and try again.</div>
+      {% endif %}
+
+      <div class="text-center">
+        <button type="submit" class="btn btn-primary px-4 py-2">
+          Submit & Pay ₹500
+        </button>
+      </div>
+    </form>
+  </div>
+</section>
+{% endblock %}
